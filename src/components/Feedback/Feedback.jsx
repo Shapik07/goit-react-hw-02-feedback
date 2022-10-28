@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Options from 'components/Feedback/FeedbackOptions/FeedbackOptions';
 import Statistics from 'components/Feedback/FeedbackStatistics/FeedbackStatistics';
 
