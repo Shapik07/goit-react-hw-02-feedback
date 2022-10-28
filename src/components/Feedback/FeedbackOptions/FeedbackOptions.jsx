@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-class Options extends Component {
+class FeedbackOptions extends Component {
   render() {
-    const { stats, onLeaveFeedback } = this.props;
+    const { options, onLeaveFeedback } = this.props;
 
     return (
       <div className="feedback">
         <ul className="listButton">
-          {stats.map((stat, index) => (
+          {options.map((opt, index) => (
             <li key={index}>
               <button
                 type="button"
                 className="button"
-                name={stat}
+                name={opt}
                 onClick={onLeaveFeedback}
               >
-                {stat}
+                {opt}
               </button>
             </li>
           ))}
@@ -25,5 +25,10 @@ class Options extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default Options;

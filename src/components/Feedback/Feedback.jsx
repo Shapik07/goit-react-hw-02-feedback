@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-import Options from 'components/Feedback/FeedbackOptions/FeedbackOptions';
+import FeedbackOptions from 'components/Feedback/FeedbackOptions/FeedbackOptions';
 import Statistics from 'components/Feedback/FeedbackStatistics/FeedbackStatistics';
 
 class Feedback extends Component {
@@ -40,9 +39,9 @@ class Feedback extends Component {
 
     return (
       <section className="feedback">
-        <Options
+        <FeedbackOptions
           onLeaveFeedback={this.handleClick}
-          stats={Object.keys(this.state)}
+          options={Object.keys(this.state)}
           title="Please leave feedback"
         />
         <Statistics
