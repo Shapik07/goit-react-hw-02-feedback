@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ButtonsList } from './FeedbackOptions.styled';
 
 class FeedbackOptions extends Component {
   render() {
@@ -7,7 +8,7 @@ class FeedbackOptions extends Component {
 
     return (
       <div className="feedback">
-        <ul className="listButton">
+        <ButtonsList className="listButton">
           {options.map((opt, index) => (
             <li key={index}>
               <button
@@ -20,7 +21,7 @@ class FeedbackOptions extends Component {
               </button>
             </li>
           ))}
-        </ul>
+        </ButtonsList>
       </div>
     );
   }
