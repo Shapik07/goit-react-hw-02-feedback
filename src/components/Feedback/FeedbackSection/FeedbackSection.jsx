@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
 
 export const Section = ({ title = '', children }) => {
-  return <section title={title}>{children}</section>;
+  return (
+    <section>
+      <p>{title}</p>
+      {children}
+    </section>
+  );
 };
 
 Section.propTypes = {
