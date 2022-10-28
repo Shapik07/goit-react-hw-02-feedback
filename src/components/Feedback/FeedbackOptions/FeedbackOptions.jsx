@@ -31,4 +31,4 @@ FeedbackOptions.propTypes = {
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
-export default Options;
+export default FeedbackOptions;
