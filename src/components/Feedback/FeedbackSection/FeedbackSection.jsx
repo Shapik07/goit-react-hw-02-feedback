@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { FeedbackSection, Title } from './FeedbackSection.styled';
 
 export const Section = ({ title = '', children }) => {
   return (
-    <section>
-      <p>{title}</p>
+    <FeedbackSection>
+      <Title>{title}</Title>
       {children}
-    </section>
+    </FeedbackSection>
   );
 };
 
