@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ButtonsList } from './FeedbackOptions.styled';
+import {
+  FeedbackOptionSection,
+  ButtonsList,
+  ButtonListItem,
+  Button,
+} from './FeedbackOptions.styled';
 
 class FeedbackOptions extends Component {
   render() {
     const { options, onLeaveFeedback } = this.props;
 
     return (
-      <div className="feedback">
+      <FeedbackOptionSection className="feedback">
         <ButtonsList className="listButton">
           {options.map((opt, index) => (
-            <li key={index}>
-              <button
+            <ButtonListItem key={index}>
+              <Button
                 type="button"
                 className="button"
                 name={opt}
                 onClick={onLeaveFeedback}
               >
                 {opt}
-              </button>
-            </li>
+              </Button>
+            </ButtonListItem>
           ))}
         </ButtonsList>
-      </div>
+      </FeedbackOptionSection>
     );
   }
 }
