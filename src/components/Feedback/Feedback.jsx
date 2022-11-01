@@ -11,9 +11,6 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  total = 0;
-  positivePercentage = null;
-
   handleClick = e => {
     this.setState(prevState => {
       return { [e.target.name]: prevState[e.target.name] + 1 };
@@ -29,13 +26,10 @@ class Feedback extends Component {
     this.positivePercentage = ((this.state.good / this.total) * 100).toFixed();
   };
 
-  onRender() {
+  render() {
     this.countTotalFeedback();
     this.countPositiveFeedbackPercentage();
-  }
 
-  render() {
-    this.onRender();
     const { good, neutral, bad } = this.state;
     const { total, positivePercentage } = this;
 
