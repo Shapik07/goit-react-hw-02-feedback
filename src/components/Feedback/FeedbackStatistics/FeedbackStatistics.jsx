@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StatisticList, StatisticElement } from './FeedbackStatistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+  console.log(positivePercentage);
   return (
     <StatisticList className="Statistic-list">
       <StatisticElement className="key-good">Good: {good}</StatisticElement>
@@ -23,6 +24,7 @@ Statistics.propTypes = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
 
 export default Statistics;
